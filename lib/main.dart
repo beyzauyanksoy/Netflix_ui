@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_ui/providerItem.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'home.dart';
@@ -14,13 +16,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder: (BuildContext, Orientation, ScreenType) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
+        return MultiProvider(
+          providers: [
+            ChangeNotifierProvider(
+              create: (context) => ProvidertItem(),
+            )
+          ],
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: const Home(),
           ),
-          home: const Home(),
         );
       },
     );

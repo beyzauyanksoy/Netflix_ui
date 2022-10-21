@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProvidertItem with ChangeNotifier {
+
+  
   Map trending = {
   "images": [
     "assets/trending1.png",

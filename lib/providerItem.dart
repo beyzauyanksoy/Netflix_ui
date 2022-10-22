@@ -33,4 +33,33 @@ class ProvidertItem with ChangeNotifier {
       "assets/popular4.png",
     ]
   };
+
+  String imageurl = "assets/detail_top_picture.png";
+  String cardImage = "assets/transformes.png";
+  Map smallButton = {
+    "smallimage": [
+      "assets/plus.png",
+      "assets/like.png",
+      "assets/share.png",
+    ]
+  };
+  Map buttontext1 = {
+    "plustitle": [
+      "My list",
+    ],
+    "liketitle": [
+      "like",
+    ],
+    "sharetitle": [
+      "share",
+    ],
+  };
+
+  List? buttontext = [
+    {
+      "plustitle": "My list",
+      "liketitle": "like",
+      "sharetitle": "share",
+    },
+  ];
 }

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_ui/providerItem.dart';
 import 'package:provider/provider.dart';
 
+import 'detail.dart';
 import 'home_bottomNavigation.dart';
 import 'listview_builder_item.dart';
 
@@ -60,23 +61,28 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    Container(
-                      
-                      //color: Colors.amber,
-                      width: MediaQuery.of(context).size.width,
-                      height: 140,
-                      child: ListView.builder(
-                        itemCount: item.trending["images"].length,
-                        scrollDirection: Axis.horizontal,
-                        shrinkWrap: true,  
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(top: 2,right: 16),
-                            child: ListviewBuilderItem(
-                              url: item.trending["images"][index],
-                            ),
-                          );
-                        },
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => DetailPage()) );
+                      },
+                      child: Container(
+                        
+                        //color: Colors.amber,
+                        width: MediaQuery.of(context).size.width,
+                        height: 140,
+                        child: ListView.builder(
+                          itemCount: item.trending["images"].length,
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,  
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.only(top: 2,right: 16),
+                              child: ListviewBuilderItem(
+                                url: item.trending["images"][index],
+                              ),
+                            );
+                          },
+                        ),
                       ),
                     )
                   ],

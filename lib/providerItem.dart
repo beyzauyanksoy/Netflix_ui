@@ -62,4 +62,13 @@ class ProvidertItem with ChangeNotifier {
       "sharetitle": "share",
     },
   ];
+  
+  Map shapeImage = {
+    "images": [
+      "assets/shape1.png",
+      "assets/shape2.png",
+      "assets/shape3.png",
+      "assets/shape4.png",
+    ]
+  };
 }

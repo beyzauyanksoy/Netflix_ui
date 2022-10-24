@@ -3,6 +3,7 @@ import 'package:netflix_ui/providerItem.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import 'detail.dart';
 import 'home.dart';
 
 void main() {
